@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">t5a2_practica</string>
+    <string-array name="numeros_cuentas">
+        <item>ES23 2342 2342 2342</item>
+        <item>ES45 5678 5678 5678</item>
+        <item>ES67 1234 1234 1234</item>
+        <item>ES89 9876 9876 9876</item>
+    </string-array>
+
+    <string-array name="numeros_cuentas2">
+        <item>ES12 3456 7890 1234</item>
+        <item>ES34 5678 9012 3456</item>
+        <item>ES56 7890 1234 5678</item>
+        <item>ES78 9012 3456 7890</item>
+    </string-array>
+
+    <string-array name="strdivisas">
+        <item>$</item>
+        <item>€</item>
+    </string-array>
+</resources>

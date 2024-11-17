@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/transferencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transferencias"
+        android:fontFamily="@font/font_baroak"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.123" />
+
+    <TextView
+        android:id="@+id/eligeCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Elige tu cuenta:"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/transferencia">
+    </TextView>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eligeCuenta">
+    </Spinner>
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp">
+
+
+        <RadioButton
+            android:id="@+id/propia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cuenta Propia"
+            android:layout_marginStart="80dp">
+
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/ajena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cuenta ajena"
+            android:layout_marginStart="0dp">
+
+        </RadioButton>
+    </RadioGroup>
+
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup"
+        android:visibility="visible">
+    </Spinner>
+
+    <EditText
+        android:id="@+id/etNumeroCuenta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Numero de cuenta"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup"
+        android:visibility="gone">
+
+    </EditText>
+    <TextView
+        android:id="@+id/cantidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cantidad:"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup">
+    </TextView>
+
+    <EditText
+        android:id="@+id/etCantidad"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="90dp"
+        app:layout_constraintStart_toEndOf="@id/cantidad"
+        app:layout_constraintTop_toBottomOf="@+id/radiogroup"
+        />
+
+    <Spinner
+        android:id="@+id/divisas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toEndOf="@+id/etCantidad"
+        app:layout_constraintTop_toTopOf="@id/etCantidad">
+    </Spinner>
+
+    <CheckBox
+        android:id="@+id/justificante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Enviar justificante"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCantidad">
+    </CheckBox>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/butEnviar"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        app:cornerRadius="6dp"
+        android:text="ENVIAR"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/justificante">
+    </com.google.android.material.button.MaterialButton>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/butCancelar"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        app:cornerRadius="6dp"
+        android:text="CANCELAR"
+        android:textSize="15dp"
+        android:backgroundTint="@color/red"
+        app:layout_constraintStart_toEndOf="@+id/butEnviar"
+        app:layout_constraintTop_toBottomOf="@+id/justificante">
+    </com.google.android.material.button.MaterialButton>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
